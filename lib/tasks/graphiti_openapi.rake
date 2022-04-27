@@ -30,5 +30,5 @@ end
 
 file jsonapi_schema do |t|
   Pathname(t.name).dirname.mkpath
-  File.write(t.name, open('http://jsonapi.org/schema').read)
+  File.write(t.name, URI.open('https://jsonapi.org/schema').read)
 end
